@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Voice</title>
+    <link rel="icon" href="icone.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Div para título e ícone -->
+        <div class="title-container">
+            <img src="icone.png" alt="Amazon Voice" class="logo">
+        </div>
+
+        <button id="voice-command-btn">Ativar Comando de Voz</button>
+
+        <div class="form-section">
+            <h2>Preencher Dados</h2>
+            <form id="report-form">
+                <div id="coordenadas"></div>
+
+                <label for="equipamento">Equipamento</label>
+                <p>Diga: "Equipamento" para descrever o equipamento</p>
+                <input type="text" id="equipamento">
+
+                <label for="descricao">Descrição da Infração</label>
+                <p>Diga: "Descrição da infração" para detalhar a infração</p>
+                <textarea id="descricao"></textarea>
+
+                <h3>Comandos de Mídia</h3>
+                <p>Diga:"Ativar Câmera", "Parar Câmera", "Ativar Áudio" ou "Parar Áudio"</p>
+            </form>
+
+            <h3>Comando de Relatório</h3>
+            <p>Diga: "Gerar relatório"</p>
+        </div>
+
+        <div class="output">
+            <h2>Relatório de Fiscalização</h2>
+            <div id="captured-data"></div>
+        </div>
+
+        <div id="video-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
